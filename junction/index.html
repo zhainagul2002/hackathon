@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>User search and Skills filter</title>
+    <!-- Google Font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <div id="search-container">
+        <input type="search" id="search-input" placeholder="Search user name or skills here.." />
+        <button id="search" onclick="searchUsers()">Search</button>
+      </div>
+
+      <div id="price-filter">
+        <input type="checkbox" id="price-all" value="all" onclick="filterByPrice(this)" checked />
+        <label for="price-all" class="checkbox-container checkbox-label">All Ages</label>
+      
+        <input type="checkbox" id="price-15-20" value="15-20" onclick="filterByPrice(this)" />
+        <label for="price-15-20" class="checkbox-container checkbox-label">15 - 20</label>
+      
+        <input type="checkbox" id="price-21-30" value="21-30" onclick="filterByPrice(this)" />
+        <label for="price-21-30" class="checkbox-container checkbox-label">21 - 30</label>
+      
+        <input type="checkbox" id="price-31-40" value="31-40" onclick="filterByPrice(this)" />
+        <label for="price-31-40" class="checkbox-container checkbox-label">31 - 40</label>
+      
+        <input type="checkbox" id="price-41-and-more" value="41-and-more" onclick="filterByPrice(this)" />
+        <label for="price-41-and-more" class="checkbox-container checkbox-label">41 and more</label>
+      </div>      
+          
+      
+      <div id="buttons">
+        <button class="button-value active" onclick="filterSkill('all')">All</button>
+        <button class="button-value" onclick="filterSkill('Frontend')">
+          Frontend
+        </button>
+        <button class="button-value" onclick="filterSkill('Backend')">
+          Backend
+        </button>
+        <button class="button-value" onclick="filterSkill('Mobile')">
+          Mobile
+        </button>
+        <button class="button-value" onclick="filterSkill('Fullstack')">
+          Fullstack
+        </button>
+        <button class="button-value" onclick="filterSkill('DevOps')">
+          DevOps
+        </button>
+        <button class="button-value" onclick="filterSkill('Python')">
+          Python
+        </button>
+        <button class="button-value" onclick="filterSkill('Java')">
+          Java
+        </button>
+      </div>
+      <div id="users"></div>
+    </div>
+    <!-- Script -->
+    <script src="script.js"></script>
+  </body>
+</html>
